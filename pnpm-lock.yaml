@@ -4,10 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-devDependencies:
-  turbo:
-    specifier: ^1.10.16
-    version: 1.10.16
+importers:
+
+  .:
+    devDependencies:
+      turbo:
+        specifier: ^1.10.16
+        version: 1.10.16
+
+  packages/typscript-config: {}
 
 packages:
 
