@@ -1,0 +1,10 @@
+{
+  "extends": "@knowledge-management/typescript-config/base.json",
+  "compilerOptions": {
+    "lib": ["es2016"],
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src"]
+
+}
