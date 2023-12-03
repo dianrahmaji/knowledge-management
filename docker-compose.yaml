@@ -1,0 +1,17 @@
+version: "1"
+
+services:
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: ./infra/docker/api/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - knowledge_management_network
+
+networks:
+  knowledge_management_network:
+    external: true

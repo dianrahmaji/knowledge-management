@@ -42,8 +42,6 @@ importers:
 
   packages/typescript-config: {}
 
-  packages/typscript-config: {}
-
 packages:
 
   /@esbuild/android-arm64@0.19.8:
