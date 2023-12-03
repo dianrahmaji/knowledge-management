@@ -9,7 +9,7 @@
     "db:pull": "turbo db:pull",
     "db:generate": "turbo db:generate",
     "docker:build": "docker-compose pull && COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.yaml build --parallel",
-    "docker:up": "docker-compose up",
+    "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down"
   },
   "devDependencies": {

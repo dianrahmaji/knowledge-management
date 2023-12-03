@@ -19,10 +19,10 @@ RUN apk update
 
 WORKDIR /app
 COPY --from=build /app/out/json .
-COPY --from=build /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=build /app/out/pnpm-lock.yaml .
 RUN pnpm i --frozen-lockfile
 COPY --from=build /app/out/full .
-COPY turbo.json turbo.json
+COPY turbo.json .
 RUN pnpm turbo build --filter=api...
 
 FROM base as run
