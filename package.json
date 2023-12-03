@@ -5,6 +5,9 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "db:push": "turbo db:push",
+    "db:pull": "turbo db:pull",
+    "db:generate": "turbo db:generate",
     "docker:build": "docker-compose pull && COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.yaml build --parallel",
     "docker:up": "docker-compose up",
     "docker:down": "docker-compose down"
