@@ -24,6 +24,11 @@ services:
       - postgres
     ports:
       - 3000:3000
+    volumes:
+      - ./:/app
+      - /app/apps/out
+      - /app/node_modules
+      - /app/apps/api/node_modules
     networks:
       - knowledge_management_network
 

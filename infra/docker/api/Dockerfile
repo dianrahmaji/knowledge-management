@@ -28,8 +28,6 @@ RUN pnpm turbo build --filter=api...
 FROM base as run
 WORKDIR /app
 COPY --from=install /app .
-
-WORKDIR /app/apps/api
 EXPOSE 3000
 
-CMD ["pnpm", "start"]
+CMD ["pnpm", "run", "dev", "--filter=api..."]
