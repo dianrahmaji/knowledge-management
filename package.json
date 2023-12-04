@@ -3,17 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "db:push": "turbo db:push",
-    "db:pull": "turbo db:pull",
-    "db:generate": "turbo db:generate",
+    "build": "dotenv -- turbo build",
+    "dev": "dotenv -- turbo dev",
+    "db:push": "dotenv -- turbo db:push",
+    "db:pull": "dotenv -- turbo db:pull",
+    "db:generate": "dotenv -- turbo db:generate",
     "docker:build": "docker-compose pull && COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.yaml build --parallel",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down"
   },
   "devDependencies": {
     "@knowledge-management/typescript-config": "workspace:*",
+    "dotenv-cli": "^7.3.0",
     "turbo": "^1.10.16"
   },
   "packageManager": "pnpm@8.11.0",

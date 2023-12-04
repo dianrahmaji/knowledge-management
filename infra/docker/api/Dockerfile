@@ -23,7 +23,7 @@ COPY --from=build /app/out/pnpm-lock.yaml .
 RUN pnpm i --frozen-lockfile
 COPY --from=build /app/out/full .
 COPY turbo.json .
-RUN pnpm turbo build --filter=api...
+RUN pnpm run build --filter=api...
 
 FROM base as run
 WORKDIR /app
