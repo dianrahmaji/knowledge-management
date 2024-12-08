@@ -3,7 +3,9 @@ import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class AppService {
-  getHello(): Observable<string> {
-    return of('Hello World!');
+  getHello(): Observable<{ message: string }> {
+    return of({
+      message: 'Hello, World!',
+    });
   }
 }
