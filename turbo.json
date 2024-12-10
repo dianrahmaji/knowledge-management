@@ -4,6 +4,9 @@
     "dev": {
       "persistent": true,
       "cache": true
+    },
+    "build": {
+      "dependsOn": ["^build"]
     }
   }
 }

@@ -1,0 +1,13 @@
+**
+!package*.json
+!pnpm-*.yaml
+!turbo.json
+
+!apps/**
+
+**/node_modules
+**/Dockerfile
+**/docker-compose.yaml
+**/.dockerignore
+**/dist
+**/test/**
